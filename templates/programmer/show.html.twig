@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Programmer{% endblock %}
+
+{% block body %}
+    <h1>Programmer</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ programmer.id }}</td>
+            </tr>
+            <tr>
+                <th>FirstName</th>
+                <td>{{ programmer.FirstName }}</td>
+            </tr>
+            <tr>
+                <th>LastName</th>
+                <td>{{ programmer.LastName }}</td>
+            </tr>
+            <tr>
+                <th>Birthdate</th>
+                <td>{{ programmer.Birthdate ? programmer.Birthdate|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Level</th>
+                <td>{{ programmer.Level }}</td>
+            </tr>
+            <tr>
+                <th>Specialization</th>
+                <td>{{ programmer.Specialization }}</td>
+            </tr>
+            <tr>
+                <th>Technology</th>
+                <td>{{ programmer.Technology }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('programmer_index') }}">back to list</a>
+
+    <a href="{{ path('programmer_edit', {'id': programmer.id}) }}">edit</a>
+
+    {{ include('programmer/_delete_form.html.twig') }}
+{% endblock %}

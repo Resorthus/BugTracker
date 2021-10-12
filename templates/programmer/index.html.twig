@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Programmer index{% endblock %}
+
+{% block body %}
+    <h1>Programmer index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Birthdate</th>
+                <th>Level</th>
+                <th>Specialization</th>
+                <th>Technology</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for programmer in programmers %}
+            <tr>
+                <td>{{ programmer.id }}</td>
+                <td>{{ programmer.FirstName }}</td>
+                <td>{{ programmer.LastName }}</td>
+                <td>{{ programmer.Birthdate ? programmer.Birthdate|date('Y-m-d') : '' }}</td>
+                <td>{{ programmer.Level }}</td>
+                <td>{{ programmer.Specialization }}</td>
+                <td>{{ programmer.Technology }}</td>
+                <td>
+                    <a href="{{ path('programmer_show', {'id': programmer.id}) }}">show</a>
+                    <a href="{{ path('programmer_edit', {'id': programmer.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('programmer_new') }}">Create new</a>
+{% endblock %}

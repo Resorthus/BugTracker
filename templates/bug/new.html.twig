@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Bug{% endblock %}
+
+{% block body %}
+    <h1>Create new Bug</h1>
+
+    {{ include('bug/_form.html.twig') }}
+
+    <a href="{{ path('bug_index') }}">back to list</a>
+{% endblock %}

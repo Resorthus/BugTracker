@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Programmer{% endblock %}
+
+{% block body %}
+    <h1>Edit Programmer</h1>
+
+    {{ include('programmer/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('programmer_index') }}">back to list</a>
+
+    {{ include('programmer/_delete_form.html.twig') }}
+{% endblock %}

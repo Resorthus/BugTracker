@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Bug{% endblock %}
+
+{% block body %}
+    <h1>Edit Bug</h1>
+
+    {{ include('bug/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('bug_index') }}">back to list</a>
+
+    {{ include('bug/_delete_form.html.twig') }}
+{% endblock %}
