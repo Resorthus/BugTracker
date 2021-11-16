@@ -41,6 +41,14 @@ class ProjectController extends AbstractController
         if (in_array('ROLE_ADMIN', $roles) || in_array('ROLE_SUPERVISOR', $roles))
         {
 
+            if ($user->getIsConfirmed() == false)
+            {
+                $data = [
+                    'errors' => "You must wait until administrator has confirmed your registration",
+                ];
+                return $this->json($data, 403);
+            }
+
             $project = $projectRepository->find($projectId);
 
             if (!$project)
@@ -78,6 +86,14 @@ class ProjectController extends AbstractController
         $roles = $user->getRoles();
         if (in_array('ROLE_ADMIN', $roles) || in_array('ROLE_SUPERVISOR', $roles))
         {
+
+            if ($user->getIsConfirmed() == false)
+            {
+                $data = [
+                    'errors' => "You must wait until administrator has confirmed your registration",
+                ];
+                return $this->json($data, 403);
+            }
 
             $projects = $projectRepository->findAll();
 

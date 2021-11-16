@@ -34,6 +34,14 @@ class BugController extends AbstractController
         if (in_array('ROLE_PROGRAMMER', $roles))
         {
 
+            if ($user->getIsConfirmed() == false)
+            {
+                $data = [
+                    'errors' => "You must wait until administrator has confirmed your registration",
+                ];
+                return $this->json($data, 403);
+            }
+
             $project = $projectRepository->find($projectId);
 
             if (!$project) {
@@ -91,6 +99,14 @@ class BugController extends AbstractController
         $roles = $user->getRoles();
         if (in_array('ROLE_PROGRAMMER', $roles))
         {
+            if ($user->getIsConfirmed() == false)
+            {
+                $data = [
+                    'errors' => "You must wait until administrator has confirmed your registration",
+                ];
+                return $this->json($data, 403);
+            }
+
 
             $project = $projectRepository->find($projectId);
 
@@ -164,6 +180,14 @@ class BugController extends AbstractController
         $roles = $user->getRoles();
         if (in_array('ROLE_PROGRAMMER', $roles))
         {
+            if ($user->getIsConfirmed() == false)
+            {
+                $data = [
+                    'errors' => "You must wait until administrator has confirmed your registration",
+                ];
+                return $this->json($data, 403);
+            }
+
 
             try {
 
@@ -279,6 +303,14 @@ class BugController extends AbstractController
         if (in_array('ROLE_PROGRAMMER', $roles))
         {
 
+            if ($user->getIsConfirmed() == false)
+            {
+                $data = [
+                    'errors' => "You must wait until administrator has confirmed your registration",
+                ];
+                return $this->json($data, 403);
+            }
+
             $project = $projectRepository->find($projectId);
 
             if (!$project) {
@@ -344,6 +376,14 @@ class BugController extends AbstractController
         $roles = $user->getRoles();
         if (in_array('ROLE_PROGRAMMER', $roles))
         {
+            if ($user->getIsConfirmed() == false)
+            {
+                $data = [
+                    'errors' => "You must wait until administrator has confirmed your registration",
+                ];
+                return $this->json($data, 403);
+            }
+
             try{
                 $project = $projectRepository->find($projectId);
 
@@ -466,6 +506,14 @@ class BugController extends AbstractController
         $roles = $user->getRoles();
         if (in_array('ROLE_PROGRAMMER', $roles))
         {
+
+            if ($user->getIsConfirmed() == false)
+            {
+                $data = [
+                    'errors' => "You must wait until administrator has confirmed your registration",
+                ];
+                return $this->json($data, 403);
+            }
 
             $project = $projectRepository->find($projectId);
 
