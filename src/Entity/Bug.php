@@ -44,24 +44,24 @@ class Bug
     private $Date;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Programmer::class, inversedBy="bugs")
-     * @Groups({"show_bug", "bug_delete"})
-     */
-    private $Responsibility;
-
-    /**
-     * @ORM\ManyToOne(targetEntity=Programmer::class, inversedBy="submittedBugs")
-     * @ORM\JoinColumn(nullable=false)
-     * @Groups({"show_bug", "bug_delete"})
-     */
-    private $SubmittedBy;
-
-    /**
      * @ORM\ManyToOne(targetEntity=Project::class, inversedBy="bugs")
      * @ORM\JoinColumn(nullable=false)
      * @Groups({"show_bug", "bug_delete"})
      */
     private $Project;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="Bug")
+     * @Groups({"show_bug", "bug_delete"})
+     */
+    private $responsibleUser;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="Bugs")
+     * @Groups({"show_bug", "bug_delete"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $submitter;
 
     public function getId(): ?int
     {
@@ -116,30 +116,6 @@ class Bug
         return $this;
     }
 
-    public function getResponsibility(): ?Programmer
-    {
-        return $this->Responsibility;
-    }
-
-    public function setResponsibility(?Programmer $Responsibility): self
-    {
-        $this->Responsibility = $Responsibility;
-
-        return $this;
-    }
-
-    public function getSubmittedBy(): ?Programmer
-    {
-        return $this->SubmittedBy;
-    }
-
-    public function setSubmittedBy(?Programmer $SubmittedBy): self
-    {
-        $this->SubmittedBy = $SubmittedBy;
-
-        return $this;
-    }
-
     public function getProject(): ?Project
     {
         return $this->Project;
@@ -148,6 +124,30 @@ class Bug
     public function setProject(?Project $Project): self
     {
         $this->Project = $Project;
+
+        return $this;
+    }
+
+    public function getResponsibleUser(): ?User
+    {
+        return $this->responsibleUser;
+    }
+
+    public function setResponsibleUser(?User $responsibleUser): self
+    {
+        $this->responsibleUser = $responsibleUser;
+
+        return $this;
+    }
+
+    public function getSubmitter(): ?User
+    {
+        return $this->submitter;
+    }
+
+    public function setSubmitter(?User $submitter): self
+    {
+        $this->submitter = $submitter;
 
         return $this;
     }

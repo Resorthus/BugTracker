@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Programmer;
 use App\Entity\Project;
+use App\Entity\User;
 use App\Form\ProgrammerType;
 use App\Repository\ProgrammerRepository;
 use App\Repository\ProjectRepository;
@@ -16,35 +17,87 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 
-/**
- * @Route("/projects")
- */
 class ProgrammerController extends AbstractController
 {
+
+//    /**
+//     * @Route("/users", name="users", methods={"GET"})
+//     */
+//    public function GetUsers(ProjectRepository $projectRepository, $projectId): Response
+//    {
+//        $token = $this->get('security.token_storage')->getToken();
+//        /**@var User $user*/
+//        $user = $token->getUser();
+//        $roles = $user->getRoles();
+//        if (in_array('ROLE_ADMIN', $roles) || in_array('ROLE_SUPERVISOR', $roles))
+//        {
+//
+//            $project = $projectRepository->find($projectId);
+//
+//            if (!$project)
+//            {
+//                $data = [
+//                    'errors' => "Project not found",
+//                ];
+//                return $this->json($data, 404);
+//            }
+//
+//            $programmers = $project->getUsers();
+//
+//            return $this->json($programmers, Response::HTTP_OK, [], [
+//                ObjectNormalizer::GROUPS => ['show_programmer', 'project_id', 'bug_id']
+//            ]);
+//        }
+//        else
+//        {
+//            $data = [
+//                'errors' => "You dont have permissions to do this",
+//            ];
+//            return $this->json($data, 403);
+//        }
+//
+//    }
+
     /**
-     * @Route("/{projectId}/programmers", name="programmers", methods={"GET"})
+     * @Route("/projects/{projectId}/programmers", name="programmers", methods={"GET"})
      */
     public function GetProgrammers(ProjectRepository $projectRepository, $projectId): Response
     {
-        $project = $projectRepository->find($projectId);
+        $token = $this->get('security.token_storage')->getToken();
+        /**@var User $user*/
+        $user = $token->getUser();
+        $roles = $user->getRoles();
+        if (in_array('ROLE_ADMIN', $roles) || in_array('ROLE_SUPERVISOR', $roles))
+        {
 
-        if (!$project)
+            $project = $projectRepository->find($projectId);
+
+            if (!$project)
+            {
+                $data = [
+                    'errors' => "Project not found",
+                ];
+                return $this->json($data, 404);
+            }
+
+            $programmers = $project->getUsers();
+
+            return $this->json($programmers, Response::HTTP_OK, [], [
+                ObjectNormalizer::GROUPS => ['show_programmer', 'project_id', 'bug_id']
+            ]);
+        }
+        else
         {
             $data = [
-                'errors' => "Project not found",
+                'errors' => "You dont have permissions to do this",
             ];
-            return $this->json($data, 404);
+            return $this->json($data, 403);
         }
 
-        $programmers = $project->getProgrammers();
-
-        return $this->json($programmers, Response::HTTP_OK, [], [
-            ObjectNormalizer::GROUPS => ['show_programmer', 'project_id', 'bug_id']
-        ]);
     }
 
     /**
-     * @Route("/{projectId}/programmers", name="programmer_new", methods={"POST"})
+     * @Route("/projects/{projectId}/programmers", name="programmer_new", methods={"POST"})
      */
     public function AddProgrammer(Request $request, EntityManagerInterface $entityManager, $projectId,
                                   ProjectRepository $projectRepository): Response
@@ -102,7 +155,7 @@ class ProgrammerController extends AbstractController
     }
 
     /**
-     * @Route("/{projectId}/programmers/{programmerId}", name="programmer_show", methods={"GET"})
+     * @Route("/projects/{projectId}/programmers/{programmerId}", name="programmer_show", methods={"GET"})
      */
     public function GetProgrammer(ProjectRepository $projectRepository, ProgrammerRepository  $programmerRepository,
                                   $projectId, $programmerId): Response
@@ -136,7 +189,7 @@ class ProgrammerController extends AbstractController
     }
 
     /**
-     * @Route("/{projectId}/programmers/{programmerId}", name="programmer_edit", methods={"PUT"})
+     * @Route("/projects/{projectId}/programmers/{programmerId}", name="programmer_edit", methods={"PUT"})
      */
     public function UpdateProgrammer(Request $request, $projectId, $programmerId, EntityManagerInterface $entityManager,
                                      ProjectRepository $projectRepository): Response
@@ -200,7 +253,7 @@ class ProgrammerController extends AbstractController
     }
 
     /**
-     * @Route("/{projectId}/programmers/{programmerId}", name="programmer_delete", methods={"DELETE"})
+     * @Route("/projects/{projectId}/programmers/{programmerId}", name="programmer_delete", methods={"DELETE"})
      */
     public function DeleteProgrammer(EntityManagerInterface $entityManager, ProjectRepository $projectRepository, $projectId,
                               $programmerId): Response

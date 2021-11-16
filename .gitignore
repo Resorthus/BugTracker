@@ -12,3 +12,6 @@
 /web/app_dev.php
 /web/bundles/
 /web/config.php
+###> lexik/jwt-authentication-bundle ###
+/config/jwt/*.pem
+###< lexik/jwt-authentication-bundle ###

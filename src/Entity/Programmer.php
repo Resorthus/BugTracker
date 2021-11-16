@@ -58,12 +58,6 @@ class Programmer
     private $Technology;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Project::class, inversedBy="programmers")
-     * @Groups({"show_programmer", "delete_programmer"})
-     */
-    private $Projects;
-
-    /**
      * @ORM\OneToMany(targetEntity=Bug::class, mappedBy="Responsibility")
      * @Groups({"show_programmer"})
      */
@@ -77,7 +71,6 @@ class Programmer
 
     public function __construct()
     {
-        $this->Projects = new ArrayCollection();
         $this->bugs = new ArrayCollection();
         $this->submittedBugs = new ArrayCollection();
     }
@@ -155,30 +148,6 @@ class Programmer
     public function setTechnology(string $Technology): self
     {
         $this->Technology = $Technology;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Project[]
-     */
-    public function getProjects(): Collection
-    {
-        return $this->Projects;
-    }
-
-    public function addProject(Project $project): self
-    {
-        if (!$this->Projects->contains($project)) {
-            $this->Projects[] = $project;
-        }
-
-        return $this;
-    }
-
-    public function removeProject(Project $project): self
-    {
-        $this->Projects->removeElement($project);
 
         return $this;
     }
