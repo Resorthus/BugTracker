@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Serializer\Annotation\Ignore;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
@@ -74,19 +75,20 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     /**
      * @ORM\ManyToMany(targetEntity=Project::class, inversedBy="users")
-     * @Groups({"show_programmer"})
+     * @Ignore
+     *
      */
     private $Projects;
 
     /**
      * @ORM\OneToMany(targetEntity=Bug::class, mappedBy="responsibleUser")
-     * @Groups({"show_programmer"})
+     * @Ignore
      */
     private $Bugs;
 
     /**
      * @ORM\OneToMany(targetEntity=Bug::class, mappedBy="submitter", orphanRemoval=true)
-     * @Groups({"show_programmer"})
+     * @Ignore
      */
     private $SubmittedBugs;
 
@@ -113,6 +115,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function setId(int $id): self
+    {
+        $this->id = $id;
+
+        return $this;
     }
 
     public function getEmail(): ?string

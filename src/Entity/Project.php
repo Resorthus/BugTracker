@@ -8,6 +8,7 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Serializer\Annotation\SerializedName;
+use Symfony\Component\Serializer\Annotation\Ignore;
 
 /**
  * @ORM\Entity(repositoryClass=ProjectRepository::class)
@@ -43,14 +44,13 @@ class Project
 
     /**
      * @ORM\OneToMany(targetEntity=Bug::class, mappedBy="Project", orphanRemoval=true)
-     * @Groups({"show_project"})
+     * @Ignore
      */
     private $bugs;
 
     /**
      * @ORM\ManyToMany(targetEntity=User::class, mappedBy="Projects")
-     * @Groups({"show_project"})
-     * @SerializedName("programmers")
+     * @Ignore
      */
     private $users;
 
@@ -63,6 +63,13 @@ class Project
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function setId(int $id): self
+    {
+        $this->id = $id;
+
+        return $this;
     }
 
     public function getName(): ?string

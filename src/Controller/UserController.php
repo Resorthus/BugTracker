@@ -30,7 +30,7 @@ class UserController extends AbstractController
 {
 
     /**
-     * @Route("/users", name="users", methods={"GET"})
+     * @Route("/api/users", name="users", methods={"GET"})
      */
     public function GetUsers(Request $request, UserRepository $userRepository): Response
     {
@@ -68,7 +68,7 @@ class UserController extends AbstractController
     }
 
     /**
-     * @Route("/users/{userId}", name="user", methods={"GET"})
+     * @Route("/api/users/{userId}", name="user", methods={"GET"})
      */
     public function GetUserInfo(Request $request, UserRepository $userRepository, $userId): Response
     {
@@ -76,12 +76,12 @@ class UserController extends AbstractController
         /**@var User $user*/
         $user = $token->getUser();
         $roles = $user->getRoles();
-        if (in_array('ROLE_ADMIN', $roles))
+        if (in_array('ROLE_ADMIN', $roles) || in_array('ROLE_PROGRAMMER', $roles))
         {
 
-            $userToLook = $userRepository->find($userId);
+            $userToLook = $userRepository->findByEmail($userId);
 
-            if (!$userToLook)
+            if (count($userToLook) != 1)
             {
                 $data = [
                     'errors' => "User not found",
@@ -89,7 +89,7 @@ class UserController extends AbstractController
                 return $this->json($data, 404);
             }
 
-            return $this->json($userToLook, Response::HTTP_OK,[],[
+            return $this->json($userToLook[0], Response::HTTP_OK,[],[
                 ObjectNormalizer::SKIP_NULL_VALUES => true,
                 ObjectNormalizer::IGNORED_ATTRIBUTES => ['userIdentifier', 'username', 'Projects', 'Bugs', 'SubmittedBugs']
             ]);
@@ -104,7 +104,7 @@ class UserController extends AbstractController
     }
 
     /**
-     * @Route("/users/{userId}", name="edit_user", methods={"PUT"})
+     * @Route("/api/users/{userId}", name="edit_user", methods={"PUT"})
      */
     public function EditUserInfo(Request $request, UserRepository $userRepository, $userId,
                                  EntityManagerInterface $entityManager): Response
@@ -197,6 +197,25 @@ class UserController extends AbstractController
                 $userToLook->setTechnology($request->get('technology'));
             }
 
+            else
+            {
+
+                $proj = $userToLook->getProjects();
+                $bugs = $userToLook->getSubmittedBugs();
+
+                foreach ($proj as $p )
+                {
+                    $p->removeUser($userToLook);
+                    $entityManager->persist($p);
+                }
+
+                foreach ($bugs as $b )
+                {
+                    $entityManager->remove($b);
+                }
+
+            }
+
             $entityManager->persist($userToLook);
             $entityManager->flush();
 
@@ -217,7 +236,7 @@ class UserController extends AbstractController
     }
 
     /**
-     * @Route("/users/{userId}", name="delete_user", methods={"DELETE"})
+     * @Route("/api/users/{userId}", name="delete_user", methods={"DELETE"})
      */
     public function DeleteUser(Request $request, UserRepository $userRepository, $userId,
                                  EntityManagerInterface $entityManager): Response
@@ -257,7 +276,7 @@ class UserController extends AbstractController
     }
 
     /**
-     * @Route("/users/{userId}", name="confirmUser", methods={"PATCH"})
+     * @Route("/api/users/{userId}", name="confirmUser", methods={"PATCH"})
      */
     public function ConfirmUser(Request $request, UserRepository $userRepository, $userId,
                                 EntityManagerInterface $entityManager): Response
@@ -312,7 +331,7 @@ class UserController extends AbstractController
     }
 
     /**
-     * @Route("/users/{userId}/projects", name="user_projects", methods={"GET"})
+     * @Route("/api/users/{userId}/projects", name="user_projects", methods={"GET"})
      */
     public function GetProgrammerProjects(Request $request, ProjectRepository $projectRepository, $userId): Response
     {

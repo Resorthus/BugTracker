@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\BugRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Serializer\Annotation\Ignore;
 
 /**
  * @ORM\Entity(repositoryClass=BugRepository::class)
@@ -44,28 +45,34 @@ class Bug
     private $Date;
 
     /**
+     * @Ignore
      * @ORM\ManyToOne(targetEntity=Project::class, inversedBy="bugs")
      * @ORM\JoinColumn(nullable=false)
-     * @Groups({"show_bug", "bug_delete"})
      */
     private $Project;
 
     /**
+     * @Ignore
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="Bug")
-     * @Groups({"show_bug", "bug_delete"})
      */
     private $responsibleUser;
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="Bugs")
-     * @Groups({"show_bug", "bug_delete"})
      * @ORM\JoinColumn(nullable=false)
+     * @Ignore
      */
     private $submitter;
 
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function setId(int $id) : self
+    {
+        $this->id = $id;
+        return $this;
     }
 
     public function getDescription(): ?string

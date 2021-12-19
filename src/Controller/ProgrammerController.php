@@ -59,7 +59,7 @@ class ProgrammerController extends AbstractController
 //    }
 
     /**
-     * @Route("/projects/{projectId}/programmers", name="programmers", methods={"GET"})
+     * @Route("/api/projects/{projectId}/programmers", name="programmers", methods={"GET"})
      */
     public function GetProgrammers(ProjectRepository $projectRepository, $projectId): Response
     {
@@ -67,7 +67,7 @@ class ProgrammerController extends AbstractController
         /**@var User $user*/
         $user = $token->getUser();
         $roles = $user->getRoles();
-        if (in_array('ROLE_ADMIN', $roles) || in_array('ROLE_SUPERVISOR', $roles))
+        if (in_array('ROLE_ADMIN', $roles) || in_array('ROLE_SUPERVISOR', $roles) || in_array('ROLE_PROGRAMMER', $roles))
         {
 
             if ($user->getIsConfirmed() == false)

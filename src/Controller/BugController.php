@@ -18,7 +18,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 
 /**
- * @Route("/projects")
+ * @Route("/api/projects")
  */
 class BugController extends AbstractController
 {
@@ -67,10 +67,27 @@ class BugController extends AbstractController
                 return $this->json($data, 403);
             }
 
+            $projectSubBugs = [];
+            foreach ($user->getSubmittedBugs() as $b)
+            {
+                if ($b->getProject()->getId() == $projectId)
+                {
+                    $projectSubBugs[] = $b;
+                }
+            }
+
+            $projectResBugs = [];
+            foreach ($user->getBugs() as $b)
+            {
+                if ($b->getProject()->getId() == $projectId)
+                {
+                    $projectResBugs[] = $b;
+                }
+            }
 
             $bugs = [
-                   'SubmittedBugs' => $user->getSubmittedBugs(),
-                    'ResponsibleForBugs' => $user->getBugs(),
+                   'SubmittedBugs' => $projectSubBugs,
+                    'ResponsibleForBugs' => $projectResBugs,
             ];
 
             return $this->json($bugs, Response::HTTP_OK, [], [

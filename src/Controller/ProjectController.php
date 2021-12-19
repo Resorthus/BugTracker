@@ -25,7 +25,7 @@ use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Validator\Constraints\Json;
 
 /**
- * @Route("/projects")
+ * @Route("/api/projects")
  */
 class ProjectController extends AbstractController
 {
@@ -411,7 +411,7 @@ class ProjectController extends AbstractController
                 $programmerBugs = $project->getBugs()->filter(function($element) use ($userToFind)
                 {
                     /**@var Bug $element*/
-                    return $element->getSubmittedBy()->getId() == $userToFind->getId();
+                    return $element->getSubmitter()->getId() == $userToFind->getId();
                 });
 
                 foreach ($programmerBugs as $b)

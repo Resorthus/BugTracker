@@ -2,11 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f255e66c-d694-470d-8052-b7a2f8a27ddb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/Components/bugs/delete.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Components/bugs/getBugsToFix.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Components/bugs/getSubmittedBugs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Components/bugs/markAsFinished.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Components/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Components/projects/create.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Components/projects/delete.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Components/projects/getAll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Components/projects/participation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Components/projects/projectBugs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Components/projects/projectProgrammers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Components/projects/supervisorProjects.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Components/projects/update.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Components/projects/userProjects.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Components/roleDisplay/programmerMenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Components/roleDisplay/supervisorMenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Components/services/isExpired.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Components/services/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Components/services/token.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Components/users/confirm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Components/users/delete.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/add.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/back.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/bug.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/bugs.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/confirm.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/done.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/edit.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/remove.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/user.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/view.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/waiting.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bugtracker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bugtracker.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/lexik_jwt_authentication.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/lexik_jwt_authentication.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/BugController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BugController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ProgrammerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProgrammerController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProjectController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Bug.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Bug.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Programmer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,10 +64,17 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/symfony/cache" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
@@ -106,6 +160,39 @@
       <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
       <path value="$PROJECT_DIR$/vendor/lexik/jwt-authentication-bundle" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
     </include_path>
   </component>
   <component name="ProjectId" id="1zJhrDVfr95ZqV1Otn7FGhwVF4D" />
@@ -118,9 +205,221 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/styles" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\bugtracker\assets\styles" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\bugtracker\assets\styles" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHPUnit.ModifiedBugControllerTest">
+    <configuration name="BugTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="Tests\Unit\Entity\BugTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/Unit/Entity/BugTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ModifiedBugControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="App\Tests\Controller\ModifiedBugControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/Controller/ModifiedBugControllerTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ModifiedBugControllerTest.testAddBugFailure" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="App\Tests\Controller\ModifiedBugControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/Controller/ModifiedBugControllerTest.php" method="testAddBugFailure" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ModifiedBugControllerTest.testAddBugNoResponsibleProgrammer" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="App\Tests\Controller\ModifiedBugControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/Controller/ModifiedBugControllerTest.php" method="testAddBugNoResponsibleProgrammer" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ModifiedBugControllerTest.testAddBugSuccess" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="App\Tests\Controller\ModifiedBugControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/Controller/ModifiedBugControllerTest.php" method="testAddBugSuccess" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ModifiedBugControllerTest.testAddBugWrongBody" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="App\Tests\Controller\ModifiedBugControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/Controller/ModifiedBugControllerTest.php" method="testAddBugWrongBody" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ModifiedBugControllerTest.testDeleteBug" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="App\Tests\Controller\ModifiedBugControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/Controller/ModifiedBugControllerTest.php" method="testDeleteBug" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ModifiedBugControllerTest.testDeleteBugFailure" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="App\Tests\Controller\ModifiedBugControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/Controller/ModifiedBugControllerTest.php" method="testDeleteBugFailure" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ModifiedBugControllerTest.testGetBugFailure" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="App\Tests\Controller\ModifiedBugControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/Controller/ModifiedBugControllerTest.php" method="testGetBugFailure" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ModifiedBugControllerTest.testGetBugNoBug" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="App\Tests\Controller\ModifiedBugControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/Controller/ModifiedBugControllerTest.php" method="testGetBugNoBug" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ModifiedBugControllerTest.testGetBugSuccess" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="App\Tests\Controller\ModifiedBugControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/Controller/ModifiedBugControllerTest.php" method="testGetBugSuccess" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ModifiedBugControllerTest.testGetBugsNoProject" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="App\Tests\Controller\ModifiedBugControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/Controller/ModifiedBugControllerTest.php" method="testGetBugsNoProject" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ModifiedBugControllerTest.testMarkAsFixedSuccess" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="App\Tests\Controller\ModifiedBugControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/Controller/ModifiedBugControllerTest.php" method="testMarkAsFixedSuccess" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ModifiedBugControllerTest.testMarkedAsFixedFailure" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="App\Tests\Controller\ModifiedBugControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/Controller/ModifiedBugControllerTest.php" method="testMarkedAsFixedFailure" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ModifiedBugControllerTest.testUpdateBugFailure" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="App\Tests\Controller\ModifiedBugControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/Controller/ModifiedBugControllerTest.php" method="testUpdateBugFailure" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ModifiedBugControllerTest.testUpdateBugSuccess" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="App\Tests\Controller\ModifiedBugControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/Controller/ModifiedBugControllerTest.php" method="testUpdateBugSuccess" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ModifiedBugControllerTest.testWrongBody" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="App\Tests\Controller\ModifiedBugControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/Controller/ModifiedBugControllerTest.php" method="testWrongBody" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ProjectTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\Entity\ProjectTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Entity/ProjectTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UserTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\Entity\UserTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Entity/UserTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UserTest.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/tests/Unit/Entity/UserTest.php">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="PHP Script.UserTest.php" />
+      <item itemvalue="PHPUnit.phpunit.xml.dist" />
+      <item itemvalue="PHPUnit.ModifiedBugControllerTest.testGetBugsNoProject" />
+      <item itemvalue="PHPUnit.ModifiedBugControllerTest.testAddBugSuccess" />
+      <item itemvalue="PHPUnit.ModifiedBugControllerTest.testAddBugFailure" />
+      <item itemvalue="PHPUnit.ModifiedBugControllerTest.testAddBugNoResponsibleProgrammer" />
+      <item itemvalue="PHPUnit.ModifiedBugControllerTest.testAddBugWrongBody" />
+      <item itemvalue="PHPUnit.ModifiedBugControllerTest.testGetBugSuccess" />
+      <item itemvalue="PHPUnit.ModifiedBugControllerTest.testGetBugFailure" />
+      <item itemvalue="PHPUnit.ModifiedBugControllerTest.testGetBugNoBug" />
+      <item itemvalue="PHPUnit.ModifiedBugControllerTest.testDeleteBug" />
+      <item itemvalue="PHPUnit.ModifiedBugControllerTest.testDeleteBugFailure" />
+      <item itemvalue="PHPUnit.ModifiedBugControllerTest.testUpdateBugSuccess" />
+      <item itemvalue="PHPUnit.ModifiedBugControllerTest.testUpdateBugFailure" />
+      <item itemvalue="PHPUnit.ModifiedBugControllerTest.testMarkAsFixedSuccess" />
+      <item itemvalue="PHPUnit.ModifiedBugControllerTest.testMarkedAsFixedFailure" />
+      <item itemvalue="PHPUnit.ModifiedBugControllerTest" />
+      <item itemvalue="PHPUnit.ModifiedBugControllerTest.testWrongBody" />
+      <item itemvalue="PHPUnit.UserTest" />
+      <item itemvalue="PHPUnit.BugTest" />
+      <item itemvalue="PHPUnit.ProjectTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.BugTest" />
+        <item itemvalue="PHPUnit.ProjectTest" />
+        <item itemvalue="PHPUnit.UserTest" />
+        <item itemvalue="PHP Script.UserTest.php" />
+        <item itemvalue="PHPUnit.ModifiedBugControllerTest.testWrongBody" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -135,7 +434,22 @@
       <workItem from="1634028136286" duration="11476000" />
       <workItem from="1634059178202" duration="2294000" />
       <workItem from="1636967051957" duration="31186000" />
-      <workItem from="1637048642748" duration="35888000" />
+      <workItem from="1637048642748" duration="37475000" />
+      <workItem from="1637125712509" duration="1022000" />
+      <workItem from="1637133001099" duration="1995000" />
+      <workItem from="1637575633202" duration="27865000" />
+      <workItem from="1637661898971" duration="18467000" />
+      <workItem from="1637741807318" duration="2457000" />
+      <workItem from="1637746005386" duration="1816000" />
+      <workItem from="1638391087380" duration="1007000" />
+      <workItem from="1639134879711" duration="9946000" />
+      <workItem from="1639214605335" duration="33491000" />
+      <workItem from="1639304768187" duration="25023000" />
+      <workItem from="1639409091644" duration="600000" />
+      <workItem from="1639471641270" duration="23688000" />
+      <workItem from="1639509535537" duration="9739000" />
+      <workItem from="1639543869989" duration="1824000" />
+      <workItem from="1639551623791" duration="404000" />
     </task>
     <servers />
   </component>
@@ -153,5 +467,32 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/bugtracker@BugTest.xml" NAME="BugTest Coverage Results" MODIFIED="1637681509912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest_testAddBugSuccess.xml" NAME="ModifiedBugControllerTest.testAddBugSuccess Coverage Results" MODIFIED="1637675304346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest_testGetBugsNoProject.xml" NAME="ModifiedBugControllerTest.testGetBugsNoProject Coverage Results" MODIFIED="1637596177833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest_testGetBugNoBug.xml" NAME="ModifiedBugControllerTest.testGetBugNoBug Coverage Results" MODIFIED="1637605182349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest_testAddBugNoResponsibleProgrammer.xml" NAME="ModifiedBugControllerTest.testAddBugNoResponsibleProgrammer Coverage Results" MODIFIED="1637601726965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest_testGetBugsFailure.xml" NAME="ModifiedBugControllerTest.testGetBugsFailure Coverage Results" MODIFIED="1637675201551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest_testMarkedAsFixedFailure.xml" NAME="ModifiedBugControllerTest.testMarkedAsFixedFailure Coverage Results" MODIFIED="1637675487703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest_testGetBugFailure.xml" NAME="ModifiedBugControllerTest.testGetBugFailure Coverage Results" MODIFIED="1637675152069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest_testAddBugFailure.xml" NAME="ModifiedBugControllerTest.testAddBugFailure Coverage Results" MODIFIED="1637675329211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest_testNoResponsibleProgrammer.xml" NAME="ModifiedBugControllerTest.testNoResponsibleProgrammer Coverage Results" MODIFIED="1637675358921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest_testGetBugs.xml" NAME="ModifiedBugControllerTest.testGetBugs Coverage Results" MODIFIED="1637588316185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest_testGetBugsSuccess.xml" NAME="ModifiedBugControllerTest.testGetBugsSuccess Coverage Results" MODIFIED="1637675175342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest_testGetBugsBadUser.xml" NAME="ModifiedBugControllerTest.testGetBugsBadUser Coverage Results" MODIFIED="1637595188253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest_testDeleteBug.xml" NAME="ModifiedBugControllerTest.testDeleteBug Coverage Results" MODIFIED="1637675379663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest_testAddBugWrongBody.xml" NAME="ModifiedBugControllerTest.testAddBugWrongBody Coverage Results" MODIFIED="1637602174625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest_testDeleteBugFailure.xml" NAME="ModifiedBugControllerTest.testDeleteBugFailure Coverage Results" MODIFIED="1637675406020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest_testUpdateBugFailure.xml" NAME="ModifiedBugControllerTest.testUpdateBugFailure Coverage Results" MODIFIED="1637675450617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest_testMarkAsFixedSuccess.xml" NAME="ModifiedBugControllerTest.testMarkAsFixedSuccess Coverage Results" MODIFIED="1637675457782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest_testWrongBody.xml" NAME="ModifiedBugControllerTest.testWrongBody Coverage Results" MODIFIED="1637675372918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest_testGetBugsS.xml" NAME="ModifiedBugControllerTest.testGetBugsSuccess Coverage Results" MODIFIED="1637596118210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ProjectTest.xml" NAME="ProjectTest Coverage Results" MODIFIED="1637677393224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest_testUpdateBugSuccess.xml" NAME="ModifiedBugControllerTest.testUpdateBugSuccess Coverage Results" MODIFIED="1637675424648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest_testBugNotFound.xml" NAME="ModifiedBugControllerTest.testBugNotFound Coverage Results" MODIFIED="1637675166701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest_testGetBugSuccess.xml" NAME="ModifiedBugControllerTest.testGetBugSuccess Coverage Results" MODIFIED="1637675049803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/bugtracker@ModifiedBugControllerTest.xml" NAME="ModifiedBugControllerTest Coverage Results" MODIFIED="1637746821354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
